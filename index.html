@@ -110,6 +110,17 @@ gtag('config', 'GTM-N7T9C82T');
   .nav-cta:hover{background:var(--primary-dark)}
   @media(max-width:920px){nav.menu{display:none}}
 
+  /* Language switcher */
+  .lang-wrap{display:flex;align-items:center;gap:6px;margin-right:10px}
+  .lang-ico{font-size:15px}
+  #google_translate_element .goog-te-gadget{font-size:0!important}
+  #google_translate_element select.goog-te-combo{font-size:13px;padding:7px 9px;border:1px solid var(--line);border-radius:10px;background:#fff;color:#444;font-weight:600;cursor:pointer;outline:none;max-width:130px}
+  .goog-te-banner-frame{display:none!important}
+  body{top:0!important}
+  #goog-gt-tt,.goog-te-balloon-frame{display:none!important}
+  .goog-text-highlight{background:none!important;box-shadow:none!important}
+  @media(max-width:560px){.lang-ico{display:none}.lang-wrap{margin-right:6px}#google_translate_element select.goog-te-combo{max-width:110px;font-size:12px}}
+
   /* Hero */
   .hero{background:url(assets/hero-banner.jpg) center/cover;color:#fff;padding:96px 0 88px;position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center}
   .hero::before{content:"";position:absolute;inset:0;background:linear-gradient(95deg,rgba(24,32,44,.55) 0%,rgba(24,32,44,.32) 45%,rgba(24,32,44,.05) 70%,rgba(24,32,44,0) 100%);z-index:0}
@@ -241,6 +252,7 @@ gtag('config', 'GTM-N7T9C82T');
       <a href="#faq">FAQ</a>
       <a href="#contact">Contact</a>
     </nav>
+    <div class="lang-wrap"><span class="lang-ico">🌐</span><div id="google_translate_element"></div></div>
     <a class="nav-cta" href="#contact">Get Free Quote</a>
   </div>
 </header>
@@ -548,6 +560,19 @@ gtag('config', 'GTM-N7T9C82T');
     <span>880 / 1050 / 900 / 1035 Series · Complete Accessories · OEM Export</span>
   </div>
 </footer>
+
+<!-- Google Translate -->
+<script>
+  function googleTranslateElementInit(){
+    new google.translate.TranslateElement({
+      pageLanguage: 'en',
+      includedLanguages: 'es,fr,ar,pt,ru,vi,id,th,de,it,tr,hi,zh-CN',
+      layout: google.translate.TranslateElement.InlineLayout.SIMPLE,
+      autoDisplay: false
+    }, 'google_translate_element');
+  }
+</script>
+<script src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 
 <!-- Floating WhatsApp -->
 <a class="wa-float" href="https://wa.me/8617888550738?text=Hello%2C%20I%20want%20a%20quotation%20for%20ASA%20synthetic%20resin%20roof%20tiles." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
