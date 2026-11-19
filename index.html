@@ -105,7 +105,7 @@
   @media(max-width:920px){nav.menu{display:none}}
 
   /* Hero */
-  .hero{background:linear-gradient(115deg,rgba(22,28,35,.88) 0%,rgba(22,28,35,.66) 48%,rgba(46,30,24,.42) 100%),url(assets/tile-black-mountain.jpg) center/cover;color:#fff;padding:96px 0 88px;position:relative;overflow:hidden;min-height:520px;display:flex;align-items:center}
+  .hero{background:linear-gradient(115deg,rgba(22,28,35,.88) 0%,rgba(22,28,35,.66) 48%,rgba(46,30,24,.42) 100%),url(assets/factory-line-red.jpg) center 30%/cover;color:#fff;padding:96px 0 88px;position:relative;overflow:hidden;min-height:520px;display:flex;align-items:center}
   .hero::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:120px;background:linear-gradient(to top,rgba(15,20,26,.55),transparent);pointer-events:none}
   .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;position:relative;z-index:1}
   .hero h1{font-size:42px;line-height:1.18;margin-bottom:16px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
@@ -123,7 +123,7 @@
   .btn-wa{background:#25D366;color:#062B14}
   .btn-quote{background:var(--primary);color:#fff}
   .btn-quote:hover{background:var(--primary-dark)}
-  @media(max-width:880px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:31px}}
+  @media(max-width:880px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:31px}#factory div[style*="repeat(4,1fr)"]{grid-template-columns:repeat(2,1fr)!important}#factory img[style*="height:280px"]{height:180px!important}}
 
   /* Trust strip */
   .trust{background:#fff;border-bottom:1px solid var(--line)}
@@ -259,6 +259,33 @@
         <div><b>0.325 W/(m·K)</b><small>Thermal conductivity</small></div>
         <div><b>150 kg</b><small>Load test, no crack @660mm</small></div>
         <div><b>6 colors</b><small>Custom colors available</small></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FACTORY -->
+<section id="factory" style="background:#fff;padding:64px 0 56px">
+  <div class="container">
+    <div style="text-align:center"><span class="eyebrow">Our Factory</span></div>
+    <h2 class="sec-title" style="font-size:30px">Real Factory, Real Production Line</h2>
+    <p class="sec-sub">Every tile is produced in our own workshop in Kaifeng, Henan — watch your order being made. Factory visits and video inspections are welcome at any time.</p>
+    <div style="display:grid;grid-template-columns:repeat(4,1fr);gap:14px">
+      <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#f7f7f7">
+        <img src="assets/factory-line-red.jpg" alt="Red ASA resin roof tile production line in Wudi factory" style="width:100%;height:280px;object-fit:cover;display:block">
+        <div style="padding:10px 14px;font-weight:700;font-size:13.5px;color:var(--ink)">Red Tile Line — Glossy ASA Surface</div>
+      </div>
+      <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#f7f7f7">
+        <img src="assets/factory-line-red2.jpg" alt="Automated ASA resin tile extrusion line" style="width:100%;height:280px;object-fit:cover;display:block">
+        <div style="padding:10px 14px;font-weight:700;font-size:13.5px;color:var(--ink)">Automated Extrusion Line</div>
+      </div>
+      <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#f7f7f7">
+        <img src="assets/factory-line-blue.jpg" alt="Blue ASA resin roof tile production line" style="width:100%;height:280px;object-fit:cover;display:block">
+        <div style="padding:10px 14px;font-weight:700;font-size:13.5px;color:var(--ink)">Blue Tile Line — Fresh Output</div>
+      </div>
+      <div style="border-radius:var(--radius);overflow:hidden;box-shadow:var(--shadow);background:#f7f7f7">
+        <img src="assets/factory-line-blue-far.jpg" alt="Wudi factory workshop with resin tile production equipment" style="width:100%;height:280px;object-fit:cover;display:block">
+        <div style="padding:10px 14px;font-weight:700;font-size:13.5px;color:var(--ink)">Workshop Overview</div>
       </div>
     </div>
   </div>
