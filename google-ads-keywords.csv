@@ -1,0 +1,41 @@
+﻿Campaign,Ad Group,Type,Keyword,Match Type,Suggested Max CPC (USD),Intent,Note
+SEA-Core,ASA Resin Roof Tile,Keyword,asa roof tile,Phrase,0.45,Product search,Main product term
+SEA-Core,ASA Resin Roof Tile,Keyword,asa synthetic resin roof tile,Phrase,0.45,Product search,
+SEA-Core,ASA Resin Roof Tile,Keyword,asa resin roof tile,Phrase,0.40,Product search,
+SEA-Core,ASA Resin Roof Tile,Keyword,synthetic resin roof tile,Phrase,0.40,Product search,
+SEA-Core,ASA Resin Roof Tile,Keyword,resin roof tile,Phrase,0.35,Product search,High volume broad term
+SEA-Core,ASA Resin Roof Tile,Keyword,asa pvc roof tile,Phrase,0.40,Product search,
+SEA-Core,ASA Resin Roof Tile,Keyword,asa roof sheet,Phrase,0.35,Product search,
+SEA-Core,Supplier,Keyword,resin roof tile manufacturer,Phrase,0.60,B2B buyer,High value
+SEA-Core,Supplier,Keyword,resin roof tile supplier,Phrase,0.55,B2B buyer,
+SEA-Core,Supplier,Keyword,asa roof tile manufacturer,Phrase,0.65,B2B buyer,
+SEA-Core,Supplier,Keyword,asa roof tile supplier,Phrase,0.60,B2B buyer,
+SEA-Core,Supplier,Keyword,roof tile factory china,Phrase,0.50,B2B buyer,
+SEA-Core,Supplier,Keyword,chinese roof tile manufacturer,Phrase,0.50,B2B buyer,
+SEA-Core,Supplier,Keyword,synthetic roofing sheets manufacturer,Phrase,0.55,B2B buyer,
+SEA-Core,PVC Sheet,Keyword,pvc roof sheet,Phrase,0.40,Product search,
+SEA-Core,PVC Sheet,Keyword,upvc roofing sheet,Phrase,0.40,Product search,
+SEA-Core,PVC Sheet,Keyword,pvc corrugated roof sheet,Phrase,0.35,Product search,
+SEA-Core,PVC Sheet,Keyword,apvc roof sheet,Phrase,0.35,Product search,
+SEA-Core,PVC Sheet,Keyword,plastic roof tile,Phrase,0.30,Product search,
+SEA-Core,PVC Sheet,Keyword,corrugated plastic roofing sheet,Phrase,0.30,Product search,
+SEA-Core,Price,Keyword,resin roof tile price,Phrase,0.55,High intent,
+SEA-Core,Price,Keyword,asa roof tile price per m2,Phrase,0.55,High intent,
+SEA-Core,Price,Keyword,roof tile price list,Phrase,0.45,High intent,
+SEA-Core,Price,Keyword,roofing sheet price per square meter,Phrase,0.45,High intent,
+SEA-Core,Dealer OEM,Keyword,roof tile distributor wanted,Phrase,0.45,Dealer,
+SEA-Core,Dealer OEM,Keyword,roofing sheet wholesale supplier,Phrase,0.50,Dealer,
+SEA-Core,Dealer OEM,Keyword,oem roof tile,Phrase,0.45,Dealer,
+SEA-Core,Dealer OEM,Keyword,roofing material importer,Phrase,0.45,Dealer,
+SEA-Core,Negative,Negative,how to install,Phrase,-,Irrelevant,DIY searcher - not buyer
+SEA-Core,Negative,Negative,installation guide,Phrase,-,Irrelevant,
+SEA-Core,Negative,Negative,roof repair,Phrase,-,Irrelevant,Service seeker
+SEA-Core,Negative,Negative,second hand,Phrase,-,Irrelevant,
+SEA-Core,Negative,Negative,used,Phrase,-,Irrelevant,
+SEA-Core,Negative,Negative,job,Phrase,-,Irrelevant,Employment
+SEA-Core,Negative,Negative,salary,Phrase,-,Irrelevant,
+SEA-Core,Negative,Negative,tile adhesive,Phrase,-,Irrelevant,Floor tile confusion
+SEA-Core,Negative,Negative,ceramic tile,Phrase,-,Irrelevant,Floor tile confusion
+SEA-Core,Negative,Negative,floor tile,Broad,-,Irrelevant,
+SEA-Core,Negative,Negative,free download,Phrase,-,Irrelevant,
+SEA-Core,Negative,Negative,diy,Phrase,-,Irrelevant,
