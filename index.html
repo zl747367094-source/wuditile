@@ -105,27 +105,24 @@
   @media(max-width:920px){nav.menu{display:none}}
 
   /* Hero */
-  .hero{background:linear-gradient(140deg,#26313A 0%,#3A2E28 55%,#5A3128 100%);color:#fff;padding:84px 0 96px;position:relative;overflow:hidden}
-  .hero::after{content:"";position:absolute;right:-140px;top:-140px;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,rgba(179,58,43,.45),transparent 65%)}
-  .hero-grid{display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:center;position:relative;z-index:1}
-  .hero h1{font-size:42px;line-height:1.18;margin-bottom:16px}
+  .hero{background:linear-gradient(115deg,rgba(22,28,35,.88) 0%,rgba(22,28,35,.66) 48%,rgba(46,30,24,.42) 100%),url(assets/tile-black-mountain.jpg) center/cover;color:#fff;padding:96px 0 88px;position:relative;overflow:hidden;min-height:520px;display:flex;align-items:center}
+  .hero::after{content:"";position:absolute;left:0;bottom:0;width:100%;height:120px;background:linear-gradient(to top,rgba(15,20,26,.55),transparent);pointer-events:none}
+  .hero-grid{display:grid;grid-template-columns:1.15fr .85fr;gap:44px;align-items:center;position:relative;z-index:1}
+  .hero h1{font-size:42px;line-height:1.18;margin-bottom:16px;text-shadow:0 2px 14px rgba(0,0,0,.4)}
   .hero h1 span{color:#F2A48D}
-  .hero p.lead{font-size:17px;color:#D8D2CC;max-width:560px;margin-bottom:28px}
+  .hero p.lead{font-size:17px;color:#E3DDD7;max-width:560px;margin-bottom:28px;text-shadow:0 1px 10px rgba(0,0,0,.45)}
   .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
+  /* hero stats overlay */
+  .hero-visual{backdrop-filter:blur(6px)}
+  .spec-mini{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+  .spec-mini div{background:rgba(18,24,30,.55);border:1px solid rgba(255,255,255,.18);border-radius:12px;padding:14px 16px;text-align:center;backdrop-filter:blur(8px)}
+  .spec-mini b{display:block;font-size:18px;color:#F2A48D;text-shadow:0 1px 8px rgba(0,0,0,.4)}
+  .spec-mini small{color:#D8D2CC;font-size:11.5px}
   .btn{display:inline-flex;align-items:center;gap:8px;padding:14px 26px;border-radius:999px;font-weight:700;font-size:16px;transition:transform .15s,background .2s}
   .btn:hover{transform:translateY(-2px)}
   .btn-wa{background:#25D366;color:#062B14}
   .btn-quote{background:var(--primary);color:#fff}
   .btn-quote:hover{background:var(--primary-dark)}
-  /* hero photo card: crop PDF cover (left 52% is the clean roof shot) */
-  .hero-visual{background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);border-radius:18px;padding:14px;backdrop-filter:blur(4px)}
-  .hero-photo{border-radius:12px;overflow:hidden;height:250px;position:relative}
-  .hero-photo img{width:100%;height:100%;object-fit:cover;object-position:center}
-  .hero-photo-cap{font-size:12px;color:#C9C2BB;text-align:center;margin-top:10px}
-  .spec-mini{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;margin-top:14px}
-  .spec-mini div{background:rgba(255,255,255,.08);border-radius:10px;padding:12px 14px;text-align:center}
-  .spec-mini b{display:block;font-size:17px;color:#F2A48D}
-  .spec-mini small{color:#C9C2BB;font-size:11.5px}
   @media(max-width:880px){.hero-grid{grid-template-columns:1fr}.hero h1{font-size:31px}}
 
   /* Trust strip */
@@ -255,8 +252,6 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="hero-photo"><img src="assets/tile-black-mountain.jpg" alt="ASA synthetic resin roof tile installed on modern villa roof"></div>
-      <div class="hero-photo-cap">Wudi ASA resin tile — villas, resorts &amp; residential roofing</div>
       <div class="spec-mini">
         <div><b>30 Years</b><small>Service warranty</small></div>
         <div><b>1.8–5 mm</b><small>Thickness range</small></div>
