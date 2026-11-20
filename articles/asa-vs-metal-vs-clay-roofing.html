@@ -128,5 +128,24 @@ gtag('config', 'GTM-N7T9C82T');
   </article>
 </div>
 <footer>© 2026 Henan Wudi New Materials Co., Ltd. · ASA Synthetic Resin Roof Tile Manufacturer · <a href="/" style="color:#F2A48D">www.wuditile.com</a></footer>
+
+<!-- Google Ads conversion tracking (lead: WhatsApp / Zalo click) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18583978627"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18583978627');
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"]') : null;
+    if(a){
+      gtag('event', 'conversion', {
+        'send_to': 'AW-18583978627/m4IKCJuj9LsdEIOFxJ1F',
+        'value': 1.0,
+        'currency': 'CNY'
+      });
+    }
+  }, true);
+</script>
 </body>
 </html>

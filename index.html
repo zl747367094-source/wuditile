@@ -682,5 +682,30 @@ gtag('config', 'GTM-N7T9C82T');
   });
 </script>
 
+<!-- Google Ads conversion tracking (lead: WhatsApp / Zalo / form submit) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18583978627"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'AW-18583978627');
+  function gtag_report_conversion(){
+    gtag('event', 'conversion', {
+      'send_to': 'AW-18583978627/m4IKCJuj9LsdEIOFxJ1F',
+      'value': 1.0,
+      'currency': 'CNY'
+    });
+  }
+  // any WhatsApp / Zalo link click = lead
+  document.addEventListener('click', function(e){
+    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"]') : null;
+    if(a){ gtag_report_conversion(); }
+  }, true);
+  // form submit (opens WhatsApp) = lead
+  document.getElementById('quoteForm').addEventListener('submit', function(){
+    gtag_report_conversion();
+  });
+</script>
+
 </body>
 </html>
