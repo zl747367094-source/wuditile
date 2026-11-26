@@ -233,12 +233,16 @@ gtag('config', 'GTM-N7T9C82T');
   footer{background:#1B2227;color:#9AA3AA;padding:34px 0;font-size:13.5px}
   footer .container{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
 
-  .wa-float{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(37,211,102,.45);z-index:200;transition:transform .2s}
+  /* Floating contact buttons: top→bottom WhatsApp / Zalo / Email */
+  .wa-float{position:fixed;right:22px;bottom:162px;width:60px;height:60px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(37,211,102,.45);z-index:200;transition:transform .2s}
   .wa-float:hover{transform:scale(1.08)}
   .wa-float svg{width:32px;height:32px;fill:#fff}
   .zalo-float{position:fixed;right:22px;bottom:92px;width:60px;height:60px;border-radius:50%;background:#0180C7;display:grid;place-items:center;box-shadow:0 6px 20px rgba(1,128,199,.45);z-index:200;transition:transform .2s}
   .zalo-float:hover{transform:scale(1.08)}
   .zalo-float b{color:#fff;font-weight:800;font-size:14px;letter-spacing:0}
+  .email-float{position:fixed;right:22px;bottom:22px;width:60px;height:60px;border-radius:50%;background:var(--primary);display:grid;place-items:center;box-shadow:0 6px 20px rgba(179,58,43,.45);z-index:200;transition:transform .2s}
+  .email-float:hover{transform:scale(1.08)}
+  .email-float svg{width:30px;height:30px;fill:#fff}
 </style>
 </head>
 <body>
@@ -665,10 +669,13 @@ gtag('config', 'GTM-N7T9C82T');
   })();
 </script>
 
-<!-- Floating WhatsApp -->
-<a class="zalo-float" href="https://zalo.me/8617888550738" target="_blank" rel="noopener" aria-label="Chat on Zalo (Vietnam)"><b>Zalo</b></a>
+<!-- Floating contact buttons: WhatsApp (top) / Zalo / Email (bottom) -->
 <a class="wa-float" href="https://wa.me/8617888550738?text=Hello%2C%20I%20want%20a%20quotation%20for%20ASA%20synthetic%20resin%20roof%20tiles." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
   <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.3.8.8-4.2-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.6-10 10.5-10s10.5 4.5 10.5 10-4.6 10.7-10.4 10.7zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.8.1a8.6 8.6 0 0 1-4.3-3.7c-.3-.5.3-.5.9-1.8.1-.2 0-.5 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4a3.9 3.9 0 0 0-1.2 2.9c0 1.7 1.2 3.3 1.4 3.6s2.4 3.8 5.9 5.2c2.2.9 3 .9 4.1.8.7-.1 1.9-.8 2.2-1.6s.3-1.5.2-1.6-.3-.3-.6-.5z"/></svg>
+</a>
+<a class="zalo-float" href="https://zalo.me/8617888550738" target="_blank" rel="noopener" aria-label="Chat on Zalo (Vietnam)"><b>Zalo</b></a>
+<a class="email-float" href="mailto:sales4@5dplastic.com?subject=ASA%20Resin%20Roof%20Tile%20Inquiry" aria-label="Email sales4@5dplastic.com">
+  <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
 </a>
 
 <script>
@@ -706,7 +713,7 @@ gtag('config', 'GTM-N7T9C82T');
   }
   // any WhatsApp / Zalo link click = lead
   document.addEventListener('click', function(e){
-    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"]') : null;
+    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"], a[href^="mailto:"]') : null;
     if(a){ gtag_report_conversion(); }
   }, true);
   // form submit (opens WhatsApp) = lead
