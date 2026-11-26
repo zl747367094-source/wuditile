@@ -57,6 +57,46 @@
   .more a{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:14px 18px;margin-bottom:10px;font-weight:600;font-size:14.5px;color:var(--accent)}
   .more a:hover{border-color:var(--primary)}
   footer{background:#1B2227;color:#9AA3AA;padding:26px 0;font-size:13px;text-align:center}
+
+  /* Floating contact buttons: top->bottom WhatsApp / Zalo / Email */
+  .wa-float{position:fixed;right:18px;bottom:162px;width:56px;height:56px;border-radius:50%;background:#25D366;display:grid;place-items:center;box-shadow:0 6px 20px rgba(37,211,102,.45);z-index:200;transition:transform .2s}
+  .wa-float:hover{transform:scale(1.08)}
+  .wa-float svg{width:30px;height:30px;fill:#fff}
+  .zalo-float{position:fixed;right:18px;bottom:92px;width:56px;height:56px;border-radius:50%;background:#0180C7;display:grid;place-items:center;box-shadow:0 6px 20px rgba(1,128,199,.45);z-index:200;transition:transform .2s}
+  .zalo-float:hover{transform:scale(1.08)}
+  .zalo-float b{color:#fff;font-weight:800;font-size:13px;letter-spacing:0}
+  .email-float{position:fixed;right:18px;bottom:22px;width:56px;height:56px;border-radius:50%;background:var(--primary);display:grid;place-items:center;box-shadow:0 6px 20px rgba(179,58,43,.45);z-index:200;transition:transform .2s;border:none;cursor:pointer;padding:0}
+  .email-float:hover{transform:scale(1.08)}
+  .email-float svg{width:28px;height:28px;fill:#fff}
+  .email-modal{position:fixed;inset:0;background:rgba(0,0,0,.5);z-index:500;display:none;align-items:center;justify-content:center;padding:20px}
+  .email-modal.open{display:flex}
+  .email-card{background:#fff;border-radius:16px;padding:28px;max-width:420px;width:100%;box-shadow:0 20px 60px rgba(0,0,0,.3);position:relative;text-align:center}
+  .email-card h3{margin:0 0 8px;color:var(--ink);font-size:20px}
+  .email-card p{margin:0 0 18px;color:var(--muted);font-size:14px}
+  .email-close{position:absolute;top:12px;right:14px;background:none;border:none;font-size:26px;color:#999;cursor:pointer;line-height:1}
+  .email-addr{display:block;background:#f5f7f6;border:1px solid var(--line);border-radius:10px;padding:14px;font-size:16px;font-weight:700;color:var(--primary-dark);word-break:break-all;margin-bottom:16px;user-select:all}
+  .email-actions{display:flex;gap:10px;flex-wrap:wrap}
+  .email-actions a,.email-actions button{flex:1;min-width:130px;padding:12px 14px;border-radius:10px;font-size:14px;font-weight:700;text-decoration:none;cursor:pointer;border:none;transition:opacity .2s}
+  .email-actions a:hover,.email-actions button:hover{opacity:.85}
+  .email-copy{background:var(--primary);color:#fff}
+  .email-open{background:#eef4f2;color:var(--green-d,#0e4c37)}
+  .email-tip{font-size:12px;color:var(--muted);margin-top:12px;min-height:16px}
+  @media(max-width:700px){
+    .container{padding:0 14px}
+    article h1{font-size:26px}
+    article h2{font-size:20px}
+    article h3{font-size:16px}
+    .nav-inner{height:54px}
+    .logo{font-size:15px}
+    .logo img{height:40px!important}
+    .nav-cta{padding:7px 12px;font-size:13px}
+    table{font-size:12px;display:block;overflow-x:auto}
+    th,td{padding:8px 10px}
+    .cta-box{padding:22px 16px}
+    .topbar .container{font-size:12px}
+    .wa-float,.zalo-float,.email-float{width:50px;height:50px;right:14px}
+    .wa-float{bottom:150px}.zalo-float{bottom:88px}.email-float{bottom:26px}
+  }
 </style>
 </head>
 <body>
@@ -157,7 +197,7 @@
   gtag('js', new Date());
   gtag('config', 'AW-18583978627');
   document.addEventListener('click', function(e){
-    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"]') : null;
+    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"], #emailFloat') : null;
     if(a){
       gtag('event', 'conversion', {
         'send_to': 'AW-18583978627/m4IKCJuj9LsdEIOFxJ1F',
@@ -167,5 +207,45 @@
     }
   }, true);
 </script>
+
+<!-- Floating contact buttons: WhatsApp (top) / Zalo / Email (bottom) -->
+<a class="wa-float" href="https://wa.me/8617888550738?text=Hello%2C%20I%20read%20your%20article%20and%20want%20a%20quotation%20for%20ASA%20resin%20roof%20tiles." target="_blank" rel="noopener" aria-label="Chat on WhatsApp">
+  <svg viewBox="0 0 32 32"><path d="M16 3C9.4 3 4 8.3 4 14.9c0 2.1.6 4.1 1.6 5.9L4 29l8.4-1.6c1.7.9 3.6 1.4 5.6 1.4 6.6 0 12-5.3 12-11.9S22.6 3 16 3zm0 21.8c-1.8 0-3.5-.5-5-1.4l-.4-.2-4.3.8.8-4.2-.2-.4c-1-1.6-1.5-3.4-1.5-5.3 0-5.5 4.6-10 10.5-10s10.5 4.5 10.5 10-4.6 10.7-10.4 10.7zm5.8-7.9c-.3-.2-1.9-.9-2.2-1s-.5-.2-.7.2-.8 1-1 1.2-.4.2-.8.1a8.6 8.6 0 0 1-4.3-3.7c-.3-.5.3-.5.9-1.8.1-.2 0-.5 0-.6s-.7-1.7-1-2.3c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6.1-.9.4a3.9 3.9 0 0 0-1.2 2.9c0 1.7 1.2 3.3 1.4 3.6s2.4 3.8 5.9 5.2c2.2.9 3 .9 4.1.8.7-.1 1.9-.8 2.2-1.6s.3-1.5.2-1.6-.3-.3-.6-.5z"/></svg>
+</a>
+<a class="zalo-float" href="https://zalo.me/8617888550738" target="_blank" rel="noopener" aria-label="Chat on Zalo (Vietnam)"><b>Zalo</b></a>
+<button type="button" class="email-float" id="emailFloat" aria-label="Show email address">
+  <svg viewBox="0 0 24 24"><path d="M20 4H4c-1.1 0-2 .9-2 2v12c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4-8 5-8-5V6l8 5 8-5v2z"/></svg>
+</button>
+<div class="email-modal" id="emailModal" role="dialog" aria-modal="true" aria-label="Contact email">
+  <div class="email-card">
+    <button type="button" class="email-close" id="emailClose" aria-label="Close">&times;</button>
+    <h3>Email Us</h3>
+    <p>Copy our email or open it in your mail app.</p>
+    <span class="email-addr" id="emailAddr">sales4@5dplastic.com</span>
+    <div class="email-actions">
+      <button type="button" class="email-copy" id="emailCopy">Copy Email</button>
+      <a class="email-open" href="mailto:sales4@5dplastic.com?subject=ASA%20Resin%20Roof%20Tile%20Inquiry">Open Mail App</a>
+    </div>
+    <div class="email-tip" id="emailTip"></div>
+  </div>
+</div>
+<script>
+(function(){
+  var modal=document.getElementById('emailModal'),openBtn=document.getElementById('emailFloat');
+  var closeBtn=document.getElementById('emailClose'),copyBtn=document.getElementById('emailCopy');
+  var tip=document.getElementById('emailTip'),addr='sales4@5dplastic.com';
+  if(!modal||!openBtn)return;
+  openBtn.addEventListener('click',function(){modal.classList.add('open');tip.textContent='';});
+  closeBtn.addEventListener('click',function(){modal.classList.remove('open');});
+  modal.addEventListener('click',function(e){if(e.target===modal)modal.classList.remove('open');});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape')modal.classList.remove('open');});
+  copyBtn.addEventListener('click',function(){
+    var done=function(){copyBtn.textContent='Copied!';tip.textContent='Email copied — paste it into your mail app.';setTimeout(function(){copyBtn.textContent='Copy Email';},2000);};
+    if(navigator.clipboard&&navigator.clipboard.writeText){navigator.clipboard.writeText(addr).then(done,fallback);}else{fallback();}
+    function fallback(){var ta=document.createElement('textarea');ta.value=addr;ta.style.position='fixed';ta.style.opacity='0';document.body.appendChild(ta);ta.select();try{document.execCommand('copy');done();}catch(err){tip.textContent='Please select and copy the address above.';}document.body.removeChild(ta);}
+  });
+})();
+</script>
+
 </body>
 </html>
