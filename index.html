@@ -106,12 +106,13 @@ gtag('config', 'GTM-N7T9C82T');
   nav.menu{display:flex;gap:20px;font-size:13.5px;font-weight:600;white-space:nowrap;flex-shrink:1}
   nav.menu a{color:#444;transition:color .2s}
   nav.menu a:hover{color:var(--primary)}
-  .nav-cta{background:var(--primary);color:#fff;padding:9px 18px;border-radius:999px;font-weight:700;font-size:14px;transition:background .2s}
+  .nav-cta{background:var(--primary);color:#fff;padding:9px 18px;border-radius:999px;font-weight:700;font-size:14px;white-space:nowrap;flex-shrink:0;transition:background .2s}
   .nav-cta:hover{background:var(--primary-dark)}
+  @media(max-width:1150px){.company-name{display:none}}
   @media(max-width:920px){nav.menu{display:none}}
 
   /* Language switcher (custom native-name menu) */
-  .lang-wrap{position:relative;display:flex;align-items:center;margin-right:10px}
+  .lang-wrap{position:relative;display:flex;align-items:center;margin-right:10px;flex-shrink:0}
   .lang-ico{font-size:15px}
   .lang-btn{display:flex;align-items:center;gap:6px;font-size:13px;font-weight:600;color:#444;background:#fff;border:1px solid var(--line);border-radius:10px;padding:7px 10px;cursor:pointer;user-select:none;white-space:nowrap}
   .lang-btn:hover{border-color:var(--primary);color:var(--primary)}
@@ -252,7 +253,7 @@ gtag('config', 'GTM-N7T9C82T');
 
 <header class="nav">
   <div class="container nav-inner">
-    <a class="logo" href="/" aria-label="WUDI TILE — back to homepage"><img src="assets/logo.png" alt="ASA Resin Roof Tiles logo" style="height:56px;border-radius:6px"><span style="font-size:12px;font-weight:600;color:#888;white-space:nowrap">Henan Wudi New Materials Co., Ltd.</span></a>
+    <a class="logo" href="/" aria-label="WUDI TILE — back to homepage"><img src="assets/logo.png" alt="ASA Resin Roof Tiles logo" style="height:56px;border-radius:6px"><span class="company-name" style="font-size:12px;font-weight:600;color:#888;white-space:nowrap">Henan Wudi New Materials Co., Ltd.</span></a>
     <nav class="menu">
       <a href="#products">Products</a>
       <a href="#advantages">Why Us</a>

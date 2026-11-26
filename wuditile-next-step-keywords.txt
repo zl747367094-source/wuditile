@@ -1,0 +1,73 @@
+========================================
+Wuditile 广告下一步：国家 + 关键词清单
+生成日期：2026-11-23
+适用广告系列：Leads-Search-1
+========================================
+
+【第 1 步】先把国家砍到 2 个（最重要，先做）
+----------------------------------------
+保留：菲律宾 Philippines、越南 Vietnam
+删除：厄瓜多尔、哥伦比亚、墨西哥、秘鲁
+位置：广告系列设置 → 找到"位置/地区"→ 编辑 → 移除这 4 个国家
+原因：¥70/天分给 6 个国家，每个国家都跑不起来；砍到 2 个才能集中预算拿数据。
+
+
+【第 2 步】加"否定关键词"（省钱，挡掉垃圾点击）
+----------------------------------------
+位置：左侧菜单"关键字"→ 上方切到"否定关键字"标签 → 点 + 添加
+匹配类型统一选：词组（Phrase）
+下面这些一行一个粘贴进去：
+
+how to install
+installation guide
+roof repair
+second hand
+used
+job
+salary
+ceramic tile
+floor tile
+near me
+home depot
+amazon
+free
+diy
+how to make
+tiles for bathroom
+
+
+【第 3 步】加正面关键词（扩流量）
+----------------------------------------
+位置：左侧菜单"关键字"→ 点 + 添加
+先全部加到现有广告组，匹配类型按下面写的选。
+
+--- A. 英文词（匹配类型：广泛 Broad）---
+asa roof tile
+resin roofing sheet
+synthetic resin roof tile
+plastic roofing sheets
+roof sheet manufacturer
+roof tile supplier china
+
+--- B. 英文高意向词（匹配类型：词组 Phrase）---
+roofing sheet philippines
+asa roof tile supplier philippines
+resin tile price philippines
+
+--- C. 越南语词（匹配类型：词组 Phrase）---
+注意：这批词建议等"新建一个越南语广告组"后再加，
+      现在先加也行，但混在英文组里效果会差一些。
+ngoi nhua asa
+tam lop nhua asa
+ngoi nhua tong hop
+nha san xuat ngoi nhua
+
+
+【操作顺序提醒】
+----------------------------------------
+1) 先砍国家 → 2) 加否定词 → 3) 加正面词
+每一步做完不用等，直接接着做下一步。
+全部做完后观察 2-3 天，看展示次数和花费是否明显上升。
+
+西语关键词（teja de resina 等）暂时不要加——
+等以后单独建西语广告系列 + 西语落地页时再用。

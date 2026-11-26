@@ -1,0 +1,42 @@
+﻿Campaign,Ad Group,Type,Keyword,Match Type,Language,Target Country,Suggested Max CPC (USD),Intent,Note
+SEA-Broad,Core Broad,Keyword,asa roof tile,Broad,English,Philippines,0.55,Product search,High volume broad term to feed the algorithm
+SEA-Broad,Core Broad,Keyword,resin roofing sheet,Broad,English,Philippines,0.50,Product search,
+SEA-Broad,Core Broad,Keyword,synthetic resin roof tile,Broad,English,Philippines,0.50,Product search,
+SEA-Broad,Core Broad,Keyword,plastic roofing sheets,Broad,English,Philippines,0.45,Product search,
+SEA-Broad,Core Broad,Keyword,roof sheet manufacturer,Broad,English,Philippines,0.60,B2B buyer,Higher intent
+SEA-Broad,Core Broad,Keyword,roof tile supplier china,Broad,English,Philippines,0.60,B2B buyer,
+SEA-ES,Latam ES,Keyword,teja de resina,Phrase,Spanish,Mexico,0.40,Product search,Latin America core term
+SEA-ES,Latam ES,Keyword,teja asa,Phrase,Spanish,Mexico,0.40,Product search,
+SEA-ES,Latam ES,Keyword,tejas de resina asa,Phrase,Spanish,Colombia,0.40,Product search,
+SEA-ES,Latam ES,Keyword,techo de teja sintetica,Phrase,Spanish,Peru,0.35,Product search,
+SEA-ES,Latam ES,Keyword,lamina de techo de resina,Phrase,Spanish,Colombia,0.35,Product search,
+SEA-ES,Latam ES,Keyword,tejas plasticas para techo,Phrase,Spanish,Ecuador,0.35,Product search,
+SEA-ES,Latam ES,Keyword,fabricante de tejas de resina,Phrase,Spanish,Mexico,0.50,B2B buyer,High value
+SEA-ES,Latam ES,Keyword,proveedor de tejas asa,Phrase,Spanish,Peru,0.50,B2B buyer,
+SEA-ES,Latam ES,Keyword,teja de resina precio,Phrase,Spanish,Mexico,0.45,High intent,
+SEA-ES,Latam ES,Keyword,precio teja sintetica,Phrase,Spanish,Colombia,0.45,High intent,
+SEA-VN,Vietnam VI,Keyword,ngoi nhua asa,Phrase,Vietnamese,Vietnam,0.30,Product search,No tones needed for Ads match
+SEA-VN,Vietnam VI,Keyword,tam lop nhua asa,Phrase,Vietnamese,Vietnam,0.30,Product search,
+SEA-VN,Vietnam VI,Keyword,ngoi nhua tong hop,Phrase,Vietnamese,Vietnam,0.30,Product search,
+SEA-VN,Vietnam VI,Keyword,ngoi nhua pvc,Phrase,Vietnamese,Vietnam,0.25,Product search,
+SEA-VN,Vietnam VI,Keyword,ma i ngói nhua,Phrase,Vietnamese,Vietnam,0.25,Product search,
+SEA-VN,Vietnam VI,Keyword,nha san xuat ngoi nhua,Phrase,Vietnamese,Vietnam,0.35,B2B buyer,
+SEA-PH,Philippines,Keyword,roofing sheet philippines,Phrase,English,Philippines,0.40,Local intent,
+SEA-PH,Philippines,Keyword,asa roof tile supplier philippines,Phrase,English,Philippines,0.50,B2B buyer,
+SEA-PH,Philippines,Keyword,resin tile price philippines,Phrase,English,Philippines,0.40,High intent,
+Negative-Expand,Negatives,Negative,how to install,Phrase,,,,Irrelevant,DIY searcher
+Negative-Expand,Negatives,Negative,installation guide,Phrase,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,roof repair,Phrase,,,,Irrelevant,Service seeker
+Negative-Expand,Negatives,Negative,second hand,Phrase,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,used,Phrase,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,job,Phrase,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,salary,Phrase,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,ceramic tile,Phrase,,,,Irrelevant,Floor tile confusion
+Negative-Expand,Negatives,Negative,floor tile,Broad,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,near me,Phrase,,,,Irrelevant,Local retail searcher
+Negative-Expand,Negatives,Negative,home depot,Phrase,,,,Irrelevant,Retail competitor
+Negative-Expand,Negatives,Negative,amazon,Phrase,,,,Irrelevant,Retail competitor
+Negative-Expand,Negatives,Negative,free,Phrase,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,diy,Phrase,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,how to make,Phrase,,,,Irrelevant,
+Negative-Expand,Negatives,Negative,tiles for bathroom,Phrase,,,,Irrelevant,Wrong product
