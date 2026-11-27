@@ -597,16 +597,14 @@ gtag('config', 'GTM-N7T9C82T');
         <div><b>Quality is our foundation</b> — 30-year warranty on every tile.</div>
       </div>
     </div>
-    <form class="quote-form" id="quoteForm">
-      <h3>Request a Free Quote</h3>
-      <label>Your Name *</label><input type="text" id="fName" required placeholder="e.g. John Smith">
-      <label>Country *</label><input type="text" id="fCountry" required placeholder="e.g. Philippines">
-      <label>WhatsApp Number *</label><input type="text" id="fPhone" required placeholder="+63 9xx xxx xxxx">
-      <label>Product &amp; Quantity</label><input type="text" id="fProduct" placeholder="e.g. 1050 tile 2.5mm, 5000 m²">
-      <label>Message</label><textarea id="fMsg" rows="3" placeholder="Project details, target price, packing requirements..."></textarea>
-      <button type="submit" class="btn btn-wa" style="background:#25D366;color:#062B14">Send Inquiry via WhatsApp</button>
-      <div class="form-note">Clicking the button opens WhatsApp with your inquiry pre-filled — no email needed.</div>
-    </form>
+    <div class="quote-form" id="quickContact">
+      <h3>Get a Free Quote — No Form Needed</h3>
+      <p style="font-size:14.5px;color:var(--muted);line-height:1.6;margin:0 0 6px">Just tap one button to chat with us directly. Tell us what you need and we'll reply with prices, colors and lead time.</p>
+      <a class="btn btn-wa" href="https://wa.me/8617888550738?text=Hello!%20I%27d%20like%20a%20quote%20for%20ASA%20synthetic%20resin%20roof%20tiles.%20Could%20you%20send%20your%20price%20list%3F" target="_blank" rel="noopener" style="background:#25D366;color:#062B14;width:100%;justify-content:center;margin-top:16px">Chat on WhatsApp</a>
+      <a class="btn" href="https://zalo.me/8617888550738" target="_blank" rel="noopener" style="background:#0180C7;color:#fff;width:100%;justify-content:center;margin-top:12px">Chat on Zalo (Vietnam)</a>
+      <button type="button" class="btn" id="emailOpenBtn" style="background:var(--primary);color:#fff;width:100%;justify-content:center;margin-top:12px">Show Email Address</button>
+      <div class="form-note">One tap — no form, no sign-up. Just say hello and we'll take it from there.</div>
+    </div>
   </div>
 </section>
 
@@ -707,24 +705,6 @@ gtag('config', 'GTM-N7T9C82T');
   </div>
 </div>
 
-<script>
-  document.getElementById('quoteForm').addEventListener('submit', function(e){
-    e.preventDefault();
-    var name = document.getElementById('fName').value.trim();
-    var country = document.getElementById('fCountry').value.trim();
-    var phone = document.getElementById('fPhone').value.trim();
-    var product = document.getElementById('fProduct').value.trim() || 'Not specified';
-    var msg = document.getElementById('fMsg').value.trim() || 'None';
-    var text = 'New Inquiry%0A'
-      + '----------------------%0A'
-      + 'Name: ' + encodeURIComponent(name) + '%0A'
-      + 'Country: ' + encodeURIComponent(country) + '%0A'
-      + 'WhatsApp: ' + encodeURIComponent(phone) + '%0A'
-      + 'Product / Qty: ' + encodeURIComponent(product) + '%0A'
-      + 'Message: ' + encodeURIComponent(msg);
-    window.open('https://wa.me/8617888550738?text=' + text, '_blank');
-  });
-</script>
 
 <!-- Google Ads conversion tracking (lead: WhatsApp / Zalo / form submit) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=AW-18583978627"></script>
@@ -742,24 +722,23 @@ gtag('config', 'GTM-N7T9C82T');
   }
   // any WhatsApp / Zalo link click = lead
   document.addEventListener('click', function(e){
-    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"], a[href^="mailto:"], #emailFloat') : null;
+    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"], a[href^="mailto:"], #emailFloat, #emailOpenBtn, #quickContact .btn') : null;
     if(a){ gtag_report_conversion(); }
   }, true);
-  // form submit (opens WhatsApp) = lead
-  document.getElementById('quoteForm').addEventListener('submit', function(){
-    gtag_report_conversion();
-  });
+  // quick contact buttons (WhatsApp / Zalo links + email button) are covered by the
+  // document-level click listener above (wa.me / zalo.me / #emailFloat). The new
+  // "Show Email Address" button opens the same modal, so wire it to the same modal.
 
   // Email popup: show address + copy to clipboard (works even without a mail app)
   (function(){
     var modal = document.getElementById('emailModal');
-    var openBtn = document.getElementById('emailFloat');
+    var openBtns = [document.getElementById('emailFloat'), document.getElementById('emailOpenBtn')].filter(Boolean);
     var closeBtn = document.getElementById('emailClose');
     var copyBtn = document.getElementById('emailCopy');
     var tip = document.getElementById('emailTip');
     var addr = 'sales4@5dplastic.com';
-    if(!modal || !openBtn) return;
-    openBtn.addEventListener('click', function(){ modal.classList.add('open'); tip.textContent=''; });
+    if(!modal || !openBtns.length) return;
+    openBtns.forEach(function(btn){ btn.addEventListener('click', function(){ modal.classList.add('open'); tip.textContent=''; }); });
     closeBtn.addEventListener('click', function(){ modal.classList.remove('open'); });
     modal.addEventListener('click', function(e){ if(e.target === modal) modal.classList.remove('open'); });
     document.addEventListener('keydown', function(e){ if(e.key === 'Escape') modal.classList.remove('open'); });
