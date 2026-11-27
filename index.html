@@ -688,12 +688,13 @@ gtag('config', 'GTM-N7T9C82T');
 </div>
 
 
-<!-- Google Ads conversion tracking (lead: WhatsApp / Zalo / form submit) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=AW-18583978627"></script>
+<!-- GA4 analytics + Google Ads conversion tracking -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-WF09ZDKCC3"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
+  gtag('config', 'G-WF09ZDKCC3', {'send_page_view': false});
   gtag('config', 'AW-18583978627');
   function gtag_report_conversion(){
     gtag('event', 'conversion', {
@@ -702,10 +703,22 @@ gtag('config', 'GTM-N7T9C82T');
       'currency': 'CNY'
     });
   }
-  // any WhatsApp / Zalo link click = lead
+  // GA4 contact-click events + Google Ads conversion
+  function ga4Contact(channel){
+    gtag('event', channel + '_click', {
+      'send_to': 'G-WF09ZDKCC3',
+      'contact_method': channel,
+      'event_category': 'contact'
+    });
+  }
   document.addEventListener('click', function(e){
-    var a = e.target.closest ? e.target.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"], a[href*="zalo.me"], a[href^="mailto:"], #emailFloat, #emailOpenBtn, #quickContact .btn') : null;
-    if(a){ gtag_report_conversion(); }
+    var t = e.target;
+    var wa = t.closest ? t.closest('a[href*="wa.me"], a[href*="api.whatsapp.com"]') : null;
+    var zalo = t.closest ? t.closest('a[href*="zalo.me"]') : null;
+    var mail = t.closest ? t.closest('#emailFloat, #emailOpenBtn, a[href^="mailto:"]') : null;
+    if(wa){ ga4Contact('whatsapp'); gtag_report_conversion(); }
+    else if(zalo){ ga4Contact('zalo'); gtag_report_conversion(); }
+    else if(mail){ ga4Contact('email'); gtag_report_conversion(); }
   }, true);
   // quick contact buttons (WhatsApp / Zalo links + email button) are covered by the
   // document-level click listener above (wa.me / zalo.me / #emailFloat). The new
